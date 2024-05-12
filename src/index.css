@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  background: linear-gradient(to bottom, #2a6fca, #3b82f6 20%, #89b4ff 80%);
+  /* Pastel background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, #2a6fca, #3b82f6);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 1000; /* Keep it above other content */
+}
+nav {
+  display: flex;
+  gap: 10px;  /* Ensure this is here if nav is the direct parent of buttons */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inner-container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 500px;   /* Desired logo width */
+  height: 500px;  /* Desired logo height */
+  overflow: hidden;  /* Hides parts of the image outside this container */
+  position: relative;
+  display: inline-block;
+}
+
+.logo img {
+  position: absolute;
+  top: 50%;    /* Adjust these values to focus on the correct part of the image */
+  left: 50%;
+  width: auto;  /* Adjust width if needed */
+  height: 300%;  /* Zooms into the image */
+  transform: translate(-50%, -50%);
+}
+
+.image-grid {
+  display: grid;
+  justify-content: flex-start; /* Aligns items to the left */
+  width: 50%; /* Takes half of the container's width */
+  padding-left: 200px;
+  border-color: #89b4ff;
+}
+
+.image-grid img {
+  width: 100%; /* Each image will take the full width of its container */
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin: 10px; /* Adds some space around the images */
+  height: auto;
+ /* Maintains aspect ratio */
+}
+
+.description {
+  width: 50%; /* Takes the other half of the container's width */
+  padding: 20px; /* Padding for some breathing room */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+  padding-right: 200px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #dbeafe;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 100px;
+  background-color: #89b4ff;
+  width: 100vw;
+  position: fixed;
+}
+
+button {
+  padding: 10px;
+}
+
+/* Other Page */
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Show two items per row */
+  gap: 20px;
+  padding: 20px;
+}
+
+.biryani-image {
+  width: 200px;  /* Make images responsive within grid */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  padding-left: 300px;
+}
+
+
+.about-container {
+  max-width: 800px; /* Limiting width for readability */
+  margin: 20px auto; /* Centering container with auto margins */
+  padding: 20px;
+  background-color: #ffffff; /* Light background for the content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+}
+
+.about-container h1 {
+  color: #333; /* Dark grey for contrast */
+  font-size: 2em; /* Large font size for heading */
+}
+
+.about-container p {
+  font-size: 1.2em; /* Slightly larger text for readability */
+  color: #666; /* Medium grey for text */
+  line-height: 1.6; /* Good line height for reading */
+  margin-top: 10px; /* Spacing between paragraphs */
+}
+
+.about-container img {
+  max-width: 100%; /* Responsive image setup */
+  height: auto;
+  border-radius: 4px; /* Optional: slightly rounded corners for the image */
+}
+
+/* contact page */
+
+.contact-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.contact-container h1 {
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.contact-container form {
+  margin-top: 20px;
+}
+
+.contact-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-container button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-container button:hover {
+  background-color: #2a6fda;
+}
+
